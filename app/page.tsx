@@ -124,10 +124,19 @@ export default function Home() {
             <span className="program-art program-art-one" aria-hidden="true"><span className="sun-disc" /><span className="field-line line-one" /><span className="field-line line-two" /><span className="field-line line-three" /></span>
             <span className="program-info"><span><strong>[Program name]</strong><small>[Geography · community to confirm]</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
           </Link>
-          <Link className="program-secondary" href="/programs">
-            <span className="program-label">FOCUS AREA / 02</span>
-            <span className="program-art program-art-two" aria-hidden="true"><span className="orbit orbit-one" /><span className="orbit orbit-two" /><span className="orbit orbit-three" /><span className="orbit-center">01</span></span>
-            <span className="program-info"><span><strong>[Program name]</strong><small>[Geography · community to confirm]</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
+          <Link className="program-secondary" href="/programs/program-two">
+            <span className="program-label">FOCUS AREA / 02 · DIGITAL LEARNING</span>
+            <span className="program-art program-art-two">
+              <Image
+                src="/lab.jpg"
+                alt="Students learning at desktop computers in a school laboratory."
+                width={736}
+                height={491}
+                sizes="(max-width: 680px) 100vw, (max-width: 900px) 40vw, 35vw"
+                className="program-art-image"
+              />
+            </span>
+            <span className="program-info"><span><strong>Computers for underserved learners</strong><small>School computer laboratory · Africa</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
           </Link>
         </div>
         <Link className="arrow-link" href="/programs">View all programs <span aria-hidden="true">↗</span></Link>

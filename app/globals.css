@@ -126,6 +126,8 @@ img { display: block; max-width: 100%; }
 .program-art { position: relative; display: block; aspect-ratio: 1.28; overflow: hidden; }
 .program-art-one { background: #b5a46c; }
 .program-art-two { background: #d0b9a0; aspect-ratio: 0.98; }
+.program-art-image { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 220ms ease; }
+.program-secondary:hover .program-art-image { transform: scale(1.025); }
 .sun-disc { position: absolute; right: 18%; top: 13%; width: 20%; aspect-ratio: 1; border-radius: 50%; background: #e5c574; }
 .field-line { position: absolute; left: -10%; width: 125%; height: 46%; border: 1px solid rgba(29, 36, 32, 0.5); border-radius: 50%; transform: rotate(-12deg); }
 .line-one { top: 43%; }.line-two { top: 51%; }.line-three { top: 60%; }
