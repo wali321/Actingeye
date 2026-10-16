@@ -2,9 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 
 const impactItems = [
-  { value: "[Add figure]", label: "People reached", note: "Period and source required" },
-  { value: "[Add figure]", label: "Communities served", note: "Period and source required" },
-  { value: "[Add figure]", label: "Program outcome", note: "Period and source required" },
+  {
+    value: "1,250",
+    label: "People reached",
+    detail: "Students and learners engaged through educational support, digital literacy activities, coding workshops, and learning resources.",
+    period: "Example: April 2025 – March 2026",
+    source: "Sample student participation register",
+    lastVerified: "Pending review",
+  },
+  {
+    value: "12",
+    label: "Communities served",
+    detail: "Communities or localities where educational programs or digital empowerment initiatives were delivered during the reporting period.",
+    period: "Example: April 2025 – March 2026",
+    source: "Sample program delivery and location register",
+    lastVerified: "Pending review",
+  },
+  {
+    value: "180",
+    label: "Program outcome",
+    detail: "Learners completing a defined digital literacy or introductory coding program, subject to documented completion criteria.",
+    period: "Example: April 2025 – March 2026",
+    source: "Sample program completion records",
+    lastVerified: "Pending review",
+  },
 ];
 
 const pathways = [
@@ -33,7 +54,7 @@ export default function Home() {
         </div>
         <div className="hero-art">
           <Image
-            src="/hero.jpg"
+            src="/main.jpg"
             alt="Students gathered around a laptop during a learning activity."
             width={2000}
             height={1333}
@@ -63,17 +84,28 @@ export default function Home() {
       </section>
 
       <section className="impact section-pad" aria-labelledby="impact-title">
-        <div className="section-kicker section-kicker-light"><span>02 / ACCOUNTABILITY</span><span>VERIFIED RESULTS ONLY</span></div>
+        <div className="section-kicker section-kicker-light"><span>02 / IMPACT &amp; TRANSPARENCY</span><span>A SAMPLE REPORTING VIEW</span></div>
         <div className="impact-heading">
           <div><p className="eyebrow">The work, made visible</p><h2 id="impact-title">Progress deserves <em>proof.</em></h2></div>
-          <p>Impact figures are intentionally left blank until the organization can provide a source, reporting period, and verification date.</p>
+          <p>A considered account of who we reach, where we work, and what learners complete. These sample indicators show how Acting Eye intends to report its work.</p>
         </div>
+        <p className="impact-integrity-note">PROTOTYPE DATA · Figures and reporting periods below are fictional examples, not verified results. Sources are placeholders pending review.</p>
         <div className="impact-list">
           {impactItems.map((item, index) => (
             <article className="impact-item" key={item.label}>
-              <span className="impact-index">0{index + 1}</span>
-              <p className="impact-value">{item.value}</p>
-              <div><h3>{item.label}</h3><p>{item.note}</p></div>
+              <div className="impact-measure">
+                <span className="impact-index">0{index + 1} <span> / 03</span></span>
+                <p className="impact-value">{item.value}</p>
+                <h3>{item.label}</h3>
+              </div>
+              <div className="impact-item-content">
+                <p className="impact-detail">{item.detail}</p>
+                <dl className="impact-provenance">
+                  <div><dt>Reporting period</dt><dd>{item.period}</dd></div>
+                  <div><dt>Evidence</dt><dd>{item.source}</dd></div>
+                </dl>
+                <p className="impact-verification">Verification: {item.lastVerified}</p>
+              </div>
             </article>
           ))}
         </div>

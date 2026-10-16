@@ -19,6 +19,7 @@ All items below are unresolved. The square-bracketed copy on pages is visible sc
 - [ ] Methodology, limitations, annual reports, and accessible evaluation documents.
 - [ ] First-hand education and digital empowerment stories with narrator approval, preferred attribution, and consent records; current Field Notes narratives are illustrative examples, not real testimonials.
 - [ ] Verify photographer credit, license, and participant/guardian consent for `public/hero.jpg`, which depicts students; remove it from public display if permission cannot be documented. Supply approved caption and alt text.
+- [ ] Verify photographer credit, license, and participant/guardian consent for `public/lab.jpg`, which depicts students in a computer laboratory; remove it from public display if permission cannot be documented.
 - [ ] Authentic, consented organization photography for other placements; current SVG artwork is illustrative, not a field photograph.
 
 ## Trust, legal, and operations
