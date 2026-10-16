@@ -19,9 +19,13 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <nav aria-label="Footer navigation">{footerLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</nav>
-        <div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© Acting Eye</span></div>
+        <div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© 2026 Acting Eye</span></div>
       </div>
-      <p className="footer-note">STARTER TEMPLATE · Organization details, legal information, and contact channels require confirmation.</p>
+      <p className="footer-note">
+        HACKATHON DEMO · SAMPLE IMPACT DATA IS ILLUSTRATIVE, NOT VERIFIED
+        {" · "}<a href="mailto:helpactingeye@organisation.org">helpactingeye@organisation.org</a>
+        {" · "}<a href="tel:18001805220">1800-180-5220</a>
+      </p>
     </footer>
   );
 }

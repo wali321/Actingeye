@@ -6,13 +6,21 @@ import { PageHeading } from "@/components/page-heading";
 export const metadata: Metadata = { title: "Our work", description: "Explore Acting Eye's education and digital empowerment initiatives." };
 
 const programs = [
-  { href: "/programs/program-one", title: "[Program name]", place: "[Geography and community to confirm]", text: "Add a verified description of the challenge, community priorities, activities, and intended outcomes." },
   {
     href: "/programs/program-two",
-    title: "A Computer Laboratory for a School",
+    title: "Computers for underserved learners",
     place: "School community · Africa",
     text: "Acting Eye established a computer laboratory at a school in Africa, creating a dedicated space for students to use computers and explore digital learning.",
-    image: "/lab.jpg",
+    image: "/lab1.jpg",
+    imageAlt: "Students working at desktop computers in a school computer laboratory.",
+  },
+  {
+    href: "/programs/book-distribution",
+    title: "Books for Young Learners",
+    place: "India",
+    text: "Acting Eye distributed books to students in India, helping put learning materials directly into young readers' hands.",
+    image: "/books.jpg",
+    imageAlt: "Students holding books during a book distribution in India.",
   },
 ];
 
@@ -21,6 +29,7 @@ export default function ProgramsPage() {
     <main id="main" className="page-main">
       <PageHeading
         index="02"
+        section="OUR WORK"
         eyebrow="Learning, made possible"
         title={<>Education opens <em>doors.</em></>}
         intro="Acting Eye works to expand access to education and digital opportunity. Our initiatives are shaped with learners, educators, and communities."
@@ -31,14 +40,15 @@ export default function ProgramsPage() {
           {programs.map((program, index) => (
             <article className="content-panel program-panel" key={program.href}>
               {program.image ? (
-                <Image
-                  className="program-card-image"
-                  src={program.image}
-                  alt="Students working at desktop computers in a school computer laboratory."
-                  width={736}
-                  height={491}
-                  sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 600px"
-                />
+                <div className="program-card-image-frame">
+                  <Image
+                    className="program-card-image"
+                    src={program.image}
+                    alt={program.imageAlt}
+                    fill
+                    sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 600px"
+                  />
+                </div>
               ) : null}
               <span className="eyebrow">FOCUS AREA / 0{index + 1}</span>
               <h2>{program.title}</h2>
@@ -48,7 +58,6 @@ export default function ProgramsPage() {
             </article>
           ))}
         </div>
-        <div className="status-callout">The computer laboratory initiative is described using the information currently available. School name, country, delivery date, equipment details, and any learner outcomes should be added only when confirmed.</div>
       </div>
     </main>
   );

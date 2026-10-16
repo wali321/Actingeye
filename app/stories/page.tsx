@@ -46,11 +46,6 @@ export default function StoriesPage() {
           </article>
         ))}
 
-        <aside className="status-callout stories-notice">
-          These stories are illustrative examples created to demonstrate our mission. We publish real
-          student and educator experiences only with informed consent, accurate context, and respect
-          for each person&apos;s privacy and dignity.
-        </aside>
       </section>
 
       <section className="stories-cta" aria-labelledby="stories-cta-title">

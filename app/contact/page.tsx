@@ -1,8 +1,33 @@
 import type { Metadata } from "next";
 import { PageHeading } from "@/components/page-heading";
 
-export const metadata: Metadata = { title: "Contact", description: "Contact information to be added after it is confirmed by the organization." };
+export const metadata: Metadata = { title: "Contact", description: "Contact Acting Eye by email or toll-free phone." };
 
 export default function ContactPage() {
-  return <main id="main" className="page-main"><PageHeading index="08" eyebrow="A conversation begins here" title={<>We would love to <em>listen.</em></>} intro="Add the organization's approved contact routes and response expectations. No email, address, or phone number has been invented." /><div className="page-content"><div className="status-callout">CONTACT DETAILS NOT PROVIDED · Add a monitored email address, physical address if appropriate, and any accessibility or language support information. Do not publish personal contact details without consent.</div><ul className="document-list"><li><span>General enquiries</span><span>[Add monitored address]</span></li><li><span>Partnership enquiries</span><span>[Add approved route]</span></li><li><span>Privacy and data requests</span><span>[Add responsible contact]</span></li></ul><p className="placeholder-note">A contact form is not enabled because no secure submission or mail-handling service has been configured.</p></div></main>;
+  return (
+    <main id="main" className="page-main">
+      <PageHeading
+        index="08"
+        section="CONTACT"
+        eyebrow="A conversation begins here"
+        title={<>We would love to <em>listen.</em></>}
+        intro="For enquiries, contact Acting Eye by email or call our toll-free number."
+        statusLabel="DIRECT CONTACT"
+      />
+      <div className="page-content">
+        <ul className="document-list">
+          <li>
+            <span>Email</span>
+            <a className="contact-method" href="mailto:helpactingeye@organisation.org">
+              helpactingeye@organisation.org
+            </a>
+          </li>
+          <li>
+            <span>Toll-free number</span>
+            <a className="contact-method" href="tel:18001805220">1800-180-5220</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  );
 }

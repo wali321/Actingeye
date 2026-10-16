@@ -18,8 +18,11 @@ All items below are unresolved. The square-bracketed copy on pages is visible sc
 - [ ] Supply actual report files and approved download language; current report titles and sizes are illustrative and unavailable.
 - [ ] Methodology, limitations, annual reports, and accessible evaluation documents.
 - [ ] First-hand education and digital empowerment stories with narrator approval, preferred attribution, and consent records; current Field Notes narratives are illustrative examples, not real testimonials.
-- [ ] Verify photographer credit, license, and participant/guardian consent for `public/hero.jpg`, which depicts students; remove it from public display if permission cannot be documented. Supply approved caption and alt text.
-- [ ] Verify photographer credit, license, and participant/guardian consent for `public/lab.jpg`, which depicts students in a computer laboratory; remove it from public display if permission cannot be documented.
+- [ ] Verify photographer credit, license, and participant/guardian consent for `public/main.jpg`, which depicts students; remove it from public display if permission cannot be documented. Supply approved caption and alt text.
+- [ ] Verify photographer credit, license, and participant/guardian consent for `public/lab1.jpg`, which depicts students in a computer laboratory; remove it from public display if permission cannot be documented.
+- [ ] Verify photographer credit, license, and participant/guardian consent for `public/books.jpg`, which depicts students during a book distribution in India; remove it from public display if permission cannot be documented.
+- [ ] Confirm the book distribution's date, local community, number/type of books, delivery partner, and any documented learning outcomes.
+- [ ] Confirm the location and organizational relevance of `public/map.png`, and provide required map-provider attribution or reuse permission before publication. Do not imply program coverage from the map alone.
 - [ ] Authentic, consented organization photography for other placements; current SVG artwork is illustrative, not a field photograph.
 
 ## Trust, legal, and operations

@@ -4,35 +4,26 @@ import Link from "next/link";
 const impactItems = [
   {
     value: "1,250",
-    label: "People reached",
-    detail: "Students and learners engaged through educational support, digital literacy activities, coding workshops, and learning resources.",
-    period: "Example: April 2025 – March 2026",
-    source: "Sample student participation register",
-    lastVerified: "Pending review",
+    label: "Learners reached",
+    detail: "Learners engaging with education, digital literacy, and learning resources.",
   },
   {
     value: "12",
-    label: "Communities served",
-    detail: "Communities or localities where educational programs or digital empowerment initiatives were delivered during the reporting period.",
-    period: "Example: April 2025 – March 2026",
-    source: "Sample program delivery and location register",
-    lastVerified: "Pending review",
+    label: "Learning communities",
+    detail: "Schools and community spaces connected through learning initiatives.",
   },
   {
     value: "180",
-    label: "Program outcome",
-    detail: "Learners completing a defined digital literacy or introductory coding program, subject to documented completion criteria.",
-    period: "Example: April 2025 – March 2026",
-    source: "Sample program completion records",
-    lastVerified: "Pending review",
+    label: "Course completions",
+    detail: "Learners completing an introductory digital skills or coding pathway.",
   },
 ];
 
 const pathways = [
-  { number: "01", title: "Give", text: "Support the work once a secure payment provider is configured.", href: "/donate", action: "Explore giving" },
-  { number: "02", title: "Volunteer", text: "Share your time and skills with the team.", href: "/get-involved", action: "Find out how" },
-  { number: "03", title: "Partner", text: "Explore a thoughtful partnership or institutional collaboration.", href: "/get-involved", action: "Start a conversation" },
-  { number: "04", title: "Stay connected", text: "Newsletter signup will be added when a privacy-reviewed service is chosen.", href: "/contact", action: "Contact the team" },
+  { number: "01", title: "Learn", text: "Explore digital literacy, coding, and learning resources.", href: "/programs", action: "Explore our work" },
+  { number: "02", title: "Volunteer", text: "Bring your time, knowledge, and perspective to the community.", href: "/get-involved", action: "Get involved" },
+  { number: "03", title: "Partner", text: "Connect with Acting Eye about education and digital access.", href: "/contact", action: "Start a conversation" },
+  { number: "04", title: "Stay connected", text: "Reach the team by email or toll-free phone.", href: "/contact", action: "Contact the team" },
 ];
 
 export default function Home() {
@@ -47,10 +38,9 @@ export default function Home() {
             build skills, confidence, and connections that open real doors.
           </p>
           <div className="hero-actions">
-            <Link className="button button-light" href="/donate">Explore giving <span aria-hidden="true">↗</span></Link>
+            <Link className="button button-light" href="/get-involved">Get involved <span aria-hidden="true">↗</span></Link>
             <Link className="text-link text-link-light" href="/programs">Discover the work <span aria-hidden="true">↓</span></Link>
           </div>
-          <p className="hero-note">PROPOSED MISSION LANGUAGE · Board approval pending.</p>
         </div>
         <div className="hero-art">
           <Image
@@ -62,7 +52,7 @@ export default function Home() {
             sizes="(max-width: 760px) 100vw, 50vw"
             className="hero-image"
           />
-          <div className="art-caption"><span>LEARNING TOGETHER</span><span>Photo permission and credit to confirm</span></div>
+          <div className="art-caption"><span>LEARNING</span><span>OPPORTUNITY · COMMUNITY</span></div>
           <span className="hero-stamp" aria-hidden="true">PEOPLE<br />· PLACE<br />· POSSIBILITY</span>
         </div>
         <a className="scroll-cue" href="#mission"><span aria-hidden="true">↓</span> Scroll to explore</a>
@@ -71,12 +61,12 @@ export default function Home() {
       <section className="mission section-pad" id="mission" aria-labelledby="mission-title">
         <div className="section-kicker"><span>01 / OUR PURPOSE</span><span>THE STARTING POINT</span></div>
         <div className="mission-grid">
-          <p className="eyebrow">A mission shaped together</p>
+          <p className="eyebrow">Education · digital opportunity</p>
           <div>
             <h2 id="mission-title">The best solutions begin with <em>listening.</em></h2>
             <p className="body-large">
-              Use this space to describe the issue in plain language, name the community&apos;s
-              strengths, and explain how the organization works alongside people—not on their behalf.
+              Acting Eye works to expand access to education and digital opportunity, so every
+              learner can build the skills, confidence, and connections that open real doors.
             </p>
             <Link className="arrow-link" href="/about">Meet the organization <span aria-hidden="true">↗</span></Link>
           </div>
@@ -84,12 +74,12 @@ export default function Home() {
       </section>
 
       <section className="impact section-pad" aria-labelledby="impact-title">
-        <div className="section-kicker section-kicker-light"><span>02 / IMPACT &amp; TRANSPARENCY</span><span>A SAMPLE REPORTING VIEW</span></div>
+        <div className="section-kicker section-kicker-light"><span>02 / IMPACT &amp; TRANSPARENCY</span><span>ILLUSTRATIVE DEMO DATA</span></div>
         <div className="impact-heading">
           <div><p className="eyebrow">The work, made visible</p><h2 id="impact-title">Progress deserves <em>proof.</em></h2></div>
-          <p>A considered account of who we reach, where we work, and what learners complete. These sample indicators show how Acting Eye intends to report its work.</p>
+          <p>A concise view of learner reach, learning communities, and completed digital skills pathways.</p>
         </div>
-        <p className="impact-integrity-note">PROTOTYPE DATA · Figures and reporting periods below are fictional examples, not verified results. Sources are placeholders pending review.</p>
+        <p className="impact-integrity-note">Illustrative figures · Demo reporting period 2025–26</p>
         <div className="impact-list">
           {impactItems.map((item, index) => (
             <article className="impact-item" key={item.label}>
@@ -100,11 +90,6 @@ export default function Home() {
               </div>
               <div className="impact-item-content">
                 <p className="impact-detail">{item.detail}</p>
-                <dl className="impact-provenance">
-                  <div><dt>Reporting period</dt><dd>{item.period}</dd></div>
-                  <div><dt>Evidence</dt><dd>{item.source}</dd></div>
-                </dl>
-                <p className="impact-verification">Verification: {item.lastVerified}</p>
               </div>
             </article>
           ))}
@@ -113,30 +98,39 @@ export default function Home() {
       </section>
 
       <section className="programs section-pad" id="programs" aria-labelledby="programs-title">
-        <div className="section-kicker"><span>03 / THE WORK</span><span>FOCUS AREAS TO CONFIRM</span></div>
+        <div className="section-kicker"><span>03 / THE WORK</span><span>INITIATIVES SHARED SO FAR</span></div>
         <div className="split-heading">
           <div><p className="eyebrow">Where effort becomes action</p><h2 id="programs-title">Rooted in place.<br /><em>Built for change.</em></h2></div>
-          <p>Replace these starter entries with confirmed programs, locations, and outcomes. No activities or geographies have been assumed.</p>
+          <p>From a school computer laboratory in Africa to book distribution in India, each initiative opens another path to learning.</p>
         </div>
         <div className="program-grid">
-          <Link className="program-feature" href="/programs">
-            <span className="program-label">FOCUS AREA / 01</span>
-            <span className="program-art program-art-one" aria-hidden="true"><span className="sun-disc" /><span className="field-line line-one" /><span className="field-line line-two" /><span className="field-line line-three" /></span>
-            <span className="program-info"><span><strong>[Program name]</strong><small>[Geography · community to confirm]</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
-          </Link>
-          <Link className="program-secondary" href="/programs/program-two">
-            <span className="program-label">FOCUS AREA / 02 · DIGITAL LEARNING</span>
-            <span className="program-art program-art-two">
+          <Link className="program-feature" href="/programs/program-two">
+            <span className="program-label">INITIATIVE / 01 · DIGITAL LEARNING</span>
+            <span className="program-art">
               <Image
-                src="/lab.jpg"
+                src="/lab1.jpg"
                 alt="Students learning at desktop computers in a school laboratory."
-                width={736}
-                height={491}
-                sizes="(max-width: 680px) 100vw, (max-width: 900px) 40vw, 35vw"
+                width={1125}
+                height={1120}
+                sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 45vw"
                 className="program-art-image"
               />
             </span>
             <span className="program-info"><span><strong>Computers for underserved learners</strong><small>School computer laboratory · Africa</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
+          </Link>
+          <Link className="program-secondary" href="/programs/book-distribution">
+            <span className="program-label">INITIATIVE / 02 · LEARNING RESOURCES</span>
+            <span className="program-art">
+              <Image
+                src="/books.jpg"
+                alt="Students holding books during a book distribution in India."
+                width={1200}
+                height={900}
+                sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 45vw"
+                className="program-art-image"
+              />
+            </span>
+            <span className="program-info"><span><strong>Books for young learners</strong><small>Book distribution · India</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
           </Link>
         </div>
         <Link className="arrow-link" href="/programs">View all programs <span aria-hidden="true">↗</span></Link>
@@ -145,8 +139,8 @@ export default function Home() {
       <section className="story section-pad" aria-labelledby="story-title">
         <div className="section-kicker"><span>04 / FIELD NOTES</span><span>STORIES WITH CONSENT</span></div>
         <div className="story-grid">
-          <div className="story-art" aria-hidden="true"><span className="story-sun" /><span className="story-shape story-shape-a" /><span className="story-shape story-shape-b" /><span className="story-art-label">IMAGE PLACEHOLDER<br />CONSENTED PHOTO TO COME</span></div>
-          <div className="story-copy"><p className="eyebrow">Listen before you tell</p><h2 id="story-title">Stories belong to the people who <em>live them.</em></h2><p>Publish a first-hand story here only with informed consent, accurate attribution, and the person&apos;s own perspective at its center.</p><Link className="arrow-link" href="/stories">Visit field notes <span aria-hidden="true">↗</span></Link></div>
+          <div className="story-art" aria-hidden="true"><Image src="/field-lines.svg" alt="" fill sizes="(max-width: 680px) 100vw, 50vw" className="story-art-image" /></div>
+          <div className="story-copy"><p className="eyebrow">Field notes · illustrative stories</p><h2 id="story-title">Stories belong to the people who <em>live them.</em></h2><p>Explore illustrative stories about the confidence, curiosity, and opportunity that learning can create.</p><Link className="arrow-link" href="/stories">Visit field notes <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
 
@@ -155,18 +149,33 @@ export default function Home() {
         <div className="approach-heading"><p className="eyebrow">A practice, not a promise</p><h2 id="approach-title">Good work is <em>shared work.</em></h2></div>
         <div className="approach-steps">
           {[
-            ["01", "Listen", "Start with community priorities and lived expertise."],
-            ["02", "Design together", "Shape a response with the people closest to the issue."],
-            ["03", "Learn openly", "Track agreed outcomes, share what changes, and improve."],
-            ["04", "Build for continuity", "Support local ownership and long-term resilience."],
+            ["01", "Listen", "Begin with the priorities and experience of learners."],
+            ["02", "Design together", "Shape learning opportunities with local educators."],
+            ["03", "Learn openly", "Reflect on what is working and what can improve."],
+            ["04", "Build for continuity", "Strengthen access to skills and learning resources."],
           ].map(([number, title, text]) => <article className="approach-step" key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}
         </div>
-        <p className="placeholder-note">STARTER FRAMEWORK · Confirm this approach with the organization before publishing as fact.</p>
       </section>
 
       <section className="places section-pad" aria-labelledby="places-title">
-        <div className="section-kicker"><span>06 / PLACE MATTERS</span><span>GEOGRAPHIES TO CONFIRM</span></div>
-        <div className="places-inner"><div><p className="eyebrow">Local knowledge, lasting change</p><h2 id="places-title">Every place has its own <em>story.</em></h2><p>List only the regions where the team is actively working, with communities named as they wish to be represented.</p></div><div className="place-map" role="img" aria-label="Abstract map placeholder; locations have not yet been provided."><span className="map-ring map-ring-a" /><span className="map-ring map-ring-b" /><span className="map-dot map-dot-a" /><span className="map-dot map-dot-b" /><span className="map-dot map-dot-c" /><span className="map-label">MAP / PLACEHOLDER</span></div></div>
+        <div className="section-kicker"><span>06 / PLACE MATTERS</span><span>NAKAWA · KIREKA · KAMPALA</span></div>
+        <div className="places-inner">
+          <div>
+            <p className="eyebrow">A sense of place</p>
+            <h2 id="places-title">Learning grows <em>locally.</em></h2>
+            <p>A map reference to Nakawa, Kireka, and Kyambogo in Kampala, Uganda.</p>
+          </div>
+          <figure className="place-map">
+            <Image
+              src="/map.png"
+              alt="Street map showing Nakawa, Kireka, Kyambogo, and nearby areas."
+              width={1350}
+              height={813}
+              sizes="(max-width: 680px) 100vw, (max-width: 900px) 90vw, 55vw"
+            />
+            <figcaption>Nakawa · Kireka · Kampala, Uganda</figcaption>
+          </figure>
+        </div>
         <Link className="arrow-link" href="/about">Learn about the organization <span aria-hidden="true">↗</span></Link>
       </section>
 
@@ -178,7 +187,7 @@ export default function Home() {
 
       <section className="trust section-pad" aria-labelledby="trust-title">
         <div className="section-kicker"><span>08 / OPEN BY DEFAULT</span><span>TRANSPARENCY</span></div>
-        <div className="trust-grid"><div><p className="eyebrow">Trust is earned in the open</p><h2 id="trust-title">Accountability is part of the <em>work.</em></h2></div><div><p>Registration details, audited accounts, policies, and annual reports will appear here when verified documents are supplied. No legal or tax claims are displayed by default.</p><Link className="arrow-link" href="/transparency">Visit transparency <span aria-hidden="true">↗</span></Link></div></div>
+        <div className="trust-grid"><div><p className="eyebrow">Trust is earned in the open</p><h2 id="trust-title">Accountability is part of the <em>work.</em></h2></div><div><p>We believe in clear communication, responsible use of resources, and learning alongside the communities at the heart of our work.</p><Link className="arrow-link" href="/transparency">Our principles <span aria-hidden="true">↗</span></Link></div></div>
       </section>
 
       <section className="closing section-pad" aria-labelledby="closing-title">

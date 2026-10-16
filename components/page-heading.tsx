@@ -1,11 +1,13 @@
 export function PageHeading({
   index,
+  section = "ACTING EYE",
   eyebrow,
   title,
   intro,
-  statusLabel = "CONTENT PLACEHOLDER",
+  statusLabel = "LEARNING · OPPORTUNITY · COMMUNITY",
 }: {
   index: string;
+  section?: string;
   eyebrow: string;
   title: React.ReactNode;
   intro: string;
@@ -13,7 +15,7 @@ export function PageHeading({
 }) {
   return (
     <header className="page-heading">
-      <div className="section-kicker"><span>{index} / [SECTION]</span><span>{statusLabel}</span></div>
+      <div className="section-kicker"><span>{index} / {section}</span><span>{statusLabel}</span></div>
       <p className="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p className="page-intro">{intro}</p>

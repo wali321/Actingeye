@@ -41,7 +41,7 @@ export function SiteHeader() {
       <nav className="desktop-nav" aria-label="Main navigation">
         {navigation.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
       </nav>
-      <Link className="header-donate" href="/donate">Donate <span aria-hidden="true">↗</span></Link>
+      <Link className="header-donate" href="/get-involved">Get involved <span aria-hidden="true">↗</span></Link>
       <div className="mobile-nav">
         <button
           className="mobile-menu-button"
@@ -58,7 +58,7 @@ export function SiteHeader() {
           {navigation.map((item) => <Link href={item.href} key={item.href} onClick={closeMenu}>{item.label}</Link>)}
           <Link href="/get-involved" onClick={closeMenu}>Get involved</Link>
           <Link href="/contact" onClick={closeMenu}>Contact</Link>
-          <Link className="mobile-donate" href="/donate" onClick={closeMenu}>Explore giving <span aria-hidden="true">↗</span></Link>
+          <Link className="mobile-donate" href="/get-involved" onClick={closeMenu}>Get involved <span aria-hidden="true">↗</span></Link>
         </nav>
       </div>
     </header>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { illustrativeStoryLabel, stories } from "@/app/stories/stories";
+import { stories } from "@/app/stories/stories";
 
 type StoryParams = { params: Promise<{ slug: string }> };
 
@@ -32,22 +32,17 @@ export default async function StoryPage({ params }: StoryParams) {
       <header className="stories-hero story-detail-hero">
         <div className="section-kicker">
           <span>FIELD NOTE / {story.number}</span>
-          <span>{story.category.toUpperCase()}</span>
+          <span>ILLUSTRATIVE STORY · {story.category.toUpperCase()}</span>
         </div>
         <p className="eyebrow">Education · Digital empowerment</p>
         <h1>{story.title}</h1>
         <p className="stories-intro">{story.summary}</p>
-        <p className="illustrative-label">{illustrativeStoryLabel}</p>
       </header>
 
       <article className="story-detail page-content" aria-label={story.title}>
         <div className="story-detail-copy">
           {story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
-        <aside className="status-callout">
-          {illustrativeStoryLabel} This narrative is an example, not a report of an actual student&apos;s
-          experience, a verified outcome, or a testimonial.
-        </aside>
         <div className="story-detail-nav">
           <Link className="arrow-link" href="/stories">Back to Field Notes <span aria-hidden="true">↗</span></Link>
           <Link className="arrow-link" href="/programs">Explore our initiatives <span aria-hidden="true">↗</span></Link>
