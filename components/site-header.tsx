@@ -34,9 +34,9 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="wordmark" href="/" aria-label="Organization name — home" onClick={closeMenu}>
+      <Link className="wordmark" href="/" aria-label="Acting Eye — home" onClick={closeMenu}>
         <span className="wordmark-symbol" aria-hidden="true">✳</span>
-        <span>[Organization name]<small>COMMUNITY · PLACE · POSSIBILITY</small></span>
+        <span>Acting Eye<small>LEARNING · OPPORTUNITY · COMMUNITY</small></span>
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">
         {navigation.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}

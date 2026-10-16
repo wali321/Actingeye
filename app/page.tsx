@@ -19,17 +19,17 @@ export default function Home() {
     <main id="main">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow hero-eyebrow"><span className="eyebrow-dot" /> A space for your mission</p>
+          <p className="eyebrow hero-eyebrow"><span className="eyebrow-dot" /> Acting Eye · learning and digital opportunity</p>
           <h1 id="hero-title">Change takes root when <em>communities</em> lead.</h1>
           <p className="hero-intro">
-            A clear, human introduction to [Organization name] belongs here. Share the challenge,
-            the community-led response, and the places where this work takes place.
+            Acting Eye works to expand access to education and digital opportunity, so learners can
+            build skills, confidence, and connections that open real doors.
           </p>
           <div className="hero-actions">
             <Link className="button button-light" href="/donate">Explore giving <span aria-hidden="true">↗</span></Link>
             <Link className="text-link text-link-light" href="/programs">Discover the work <span aria-hidden="true">↓</span></Link>
           </div>
-          <p className="hero-note">CONTENT PLACEHOLDER · Replace this introduction with verified mission copy.</p>
+          <p className="hero-note">PROPOSED MISSION LANGUAGE · Board approval pending.</p>
         </div>
         <div className="hero-art">
           <Image

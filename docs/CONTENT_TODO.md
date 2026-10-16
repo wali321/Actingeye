@@ -4,9 +4,10 @@ All items below are unresolved. The square-bracketed copy on pages is visible sc
 
 ## Organization and brand
 
-- [ ] Official organization name, wordmark/logo, colors, and canonical domain.
-- [ ] Approved one-sentence mission and concise problem/approach copy.
-- [ ] Organization history, values, team biographies, board, and governance details.
+- [x] Official organization name: Acting Eye.
+- [ ] Wordmark/logo, brand colors, and canonical domain.
+- [ ] Board-approved one-sentence mission and concise problem/approach copy. The current About and home-page copy is the proposed language supplied for the prototype, not an approved mission statement.
+- [ ] Organization history, including verified founding year, founder(s), origin, values, team biographies, board, and governance details.
 - [ ] Language requirements and translations.
 
 ## Work, places, and stories
@@ -34,5 +35,5 @@ All items below are unresolved. The square-bracketed copy on pages is visible sc
 ## Defaults that must be replaced
 
 - [ ] Replace `https://example.org` in `.env` with the real canonical HTTPS URL.
-- [ ] Replace `[Organization name]` and starter text across routes, metadata, and footer.
+- [ ] Review remaining starter copy across routes and confirm organization-wide terminology.
 - [ ] Remove any unused starter program/story entries instead of treating them as real.

@@ -20,20 +20,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.org"),
   title: {
-    default: "[Organization name] — community, place, possibility",
-    template: "%s | [Organization name]",
+    default: "Acting Eye — learning, opportunity, community",
+    template: "%s | Acting Eye",
   },
   description:
-    "A starter website for a mission-driven organization. Add verified details about the organization, its work, and the communities it serves.",
+    "Acting Eye works to expand access to education, digital skills, and opportunity. Organization details and impact claims are being verified.",
   openGraph: {
-    title: "[Organization name] — community, place, possibility",
-    description: "A starter website for a mission-driven organization. Add verified details before launch.",
+    title: "Acting Eye — learning, opportunity, community",
+    description: "Education and digital opportunity, shaped with communities.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "[Organization name] — community, place, possibility",
-    description: "A starter website for a mission-driven organization. Add verified details before launch.",
+    title: "Acting Eye — learning, opportunity, community",
+    description: "Education and digital opportunity, shaped with communities.",
   },
 };
 
