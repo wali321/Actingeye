@@ -100,7 +100,7 @@ export default function Home() {
         </div>
         <div className="program-grid">
           <article className="program-feature">
-            <Link className="program-art program-art-feature" href="/programs/program-two" aria-label="Explore Computers for underserved learners">
+            <Link className="program-art program-art-feature" href="/programs/program-two" aria-label="Explore Computers for underprivileged learners">
               <Image
                 src="/lab1.jpg"
                 alt="Students learning at desktop computers in a school laboratory."
@@ -114,7 +114,7 @@ export default function Home() {
             <div className="program-feature-copy">
               <span className="program-label"><span>01</span> DIGITAL LEARNING</span>
               <div className="program-feature-heading">
-                <h3><Link href="/programs/program-two">Computers for underserved learners</Link></h3>
+                <h3><Link href="/programs/program-two">Computers for underprivileged learners</Link></h3>
                 <Link className="program-text-link" href="/programs/program-two">Explore initiative <span aria-hidden="true">↗</span></Link>
               </div>
             </div>

@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Our work", description: "Explore Act
 const programs = [
   {
     href: "/programs/program-two",
-    title: "Computers for underserved learners",
+    title: "Computers for underprivileged learners",
     place: "School community · Africa",
     text: "Acting Eye established a computer laboratory at a school in Africa, creating a dedicated space for students to use computers and explore digital learning.",
     image: "/lab1.jpg",

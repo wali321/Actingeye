@@ -14,23 +14,33 @@ export default function ContactPage() {
         intro="For enquiries, contact Acting Eye by email or call our toll-free number."
         statusLabel="DIRECT CONTACT"
       />
-      <div className="page-content">
-        <ul className="document-list">
-          <li>
-            <span>Email</span>
-            <a className="contact-method" href="mailto:helpactingeye@organisation.org">
-              helpactingeye@organisation.org
-            </a>
-          </li>
-          <li>
-            <span>Toll-free number</span>
-            <a className="contact-method" href="tel:18001805220">1800-180-5220</a>
-          </li>
-          <li>
-            <span>Headquarters</span>
-            <span>Switzerland</span>
-          </li>
-        </ul>
+      <div className="page-content contact-content">
+        <div className="contact-layout">
+          <section className="contact-methods" aria-labelledby="contact-methods-title">
+            <p className="eyebrow">Direct contact</p>
+            <h2 id="contact-methods-title">Choose how to <em>connect.</em></h2>
+            <div className="contact-options">
+              <a className="contact-option" href="mailto:helpactingeye@organisation.org">
+                <span className="contact-option-label">01 / EMAIL</span>
+                <span className="contact-option-value">helpactingeye@organisation.org</span>
+                <span className="contact-option-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a className="contact-option" href="tel:18001805220">
+                <span className="contact-option-label">02 / TOLL-FREE</span>
+                <span className="contact-option-value">1800-180-5220</span>
+                <span className="contact-option-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </section>
+          <aside className="contact-headquarters" aria-label="Headquarters location">
+            <p className="eyebrow">Headquarters</p>
+            <p className="contact-country">Switzerland</p>
+            <span className="contact-location-rule" aria-hidden="true" />
+            <p className="contact-location-note">
+              For enquiries about education, digital opportunity, or ways to work together, get in touch.
+            </p>
+          </aside>
+        </div>
       </div>
     </main>
   );

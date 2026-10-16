@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!programSlugs.includes(slug)) return { title: "Program not found" };
   if (slug === "program-two") {
     return {
-      title: "Computers for underserved learners",
+      title: "Computers for underprivileged learners",
       description: "Acting Eye established a computer laboratory at a school in Africa to support access to computers and digital learning.",
     };
   }
@@ -38,7 +38,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           index="02"
           section="OUR WORK"
           eyebrow="Digital learning · school partnership"
-          title={<>Computers for underserved <em>learners.</em></>}
+          title={<>Computers for underprivileged <em>learners.</em></>}
           intro="Acting Eye established a computer laboratory at a school in Africa, creating a dedicated space for students to access computers and explore digital learning."
           statusLabel="SCHOOL INITIATIVE"
         />
