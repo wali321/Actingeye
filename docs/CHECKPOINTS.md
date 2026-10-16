@@ -1,0 +1,17 @@
+# Checkpoint tracker
+
+Status values: TODO / IN_PROGRESS / PASS / FAIL / BLOCKED.
+
+| ID | Task | Status | Files changed | Commands/tests run | Evidence | Outstanding issues |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0 | Repository inspection and content planning | PASS | `docs/IMPLEMENTATION_PLAN.md`, `docs/CONTENT_MODEL.md`, `docs/CONTENT_TODO.md` | Repository and manifest inspection | Existing Next.js App Router, Tailwind v4, shadcn configuration, no org content or supplied reference URL | Organization variables remain unanswered |
+| 1 | Editorial tokens and art direction | PASS | `app/globals.css`, `docs/DESIGN_SYSTEM.md`, `public/field-lines.svg`, `docs/IMAGE_CREDITS.md` | Contrast ratios documented from token colors | Responsive token-driven visual system and original labeled SVG illustration | Manual browser contrast review remains |
+| 2 | Site map and page structure | PASS | `app/**/page.tsx`, `app/not-found.tsx`, `app/error.tsx` | `npm run build`; HTTP GET checks for each route plus expected 404 | Pages return 200; unknown route returns 404 | Content is starter placeholder only |
+| 3 | App Router components and content separation | PASS | `components/**`, `app/**` | `npm run lint`; `npx tsc --noEmit`; `npm run build` | All three commands pass; client components limited to menu and giving selector | Content currently lives in route files |
+| 4 | Imagery, typography, and copy integrity | PASS | `public/field-lines.svg`, `app/page.tsx`, `docs/IMAGE_CREDITS.md` | Static inspection; desktop screenshot | No invented outcomes, testimonials, people, or photo credits | Authentic images and approved copy absent |
+| 5 | Interaction and reduced motion | IN_PROGRESS | `components/site-header.tsx`, `components/donation-options.tsx`, `app/globals.css` | `npm run lint`; `npm run build`; desktop browser opened | Keyboard Escape/menu behavior in code; amount/frequency selection; reduced-motion styles | Automated menu interaction attempt timed out because the browser tool remained at desktop width; rerun keyboard/mobile walkthrough |
+| 6 | Responsive layouts | IN_PROGRESS | `app/globals.css` | `npm run build`; desktop screenshot reviewed | CSS breakpoints at 900px, 680px, 360px | Mobile screenshot and target viewport visual audit not verified |
+| 7 | Dependencies and tooling | PASS | No dependency changes | `package.json` inspection | Existing dependencies retained; no redundant UI, motion, CMS, forms, or payment libraries added | Choose integrations only after real requirements |
+| 8 | Functionality, security, and accessibility | IN_PROGRESS | `next.config.ts`, routes, components | `npm run lint`; `npx tsc --noEmit`; `npm run build`; all routes checked by HTTP; security headers checked | Baseline headers and non-transactional payment flow; forms do not collect data | Automated axe, successful keyboard interaction, and manual assistive-technology review not run |
+| 9 | Visual QA, SEO, and performance | IN_PROGRESS | `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`, `next.config.ts` | Production build; all routes checked by HTTP; desktop screenshot reviewed; sitemap checked to omit checkout response pages | Metadata and sitemap/robots code added | Mobile screenshot, Lighthouse, throttled network, and performance measurements not run |
+| 10 | Handoff and operational readiness | IN_PROGRESS | `docs/**`, `.env.example` | Build/test results to update | Outstanding content and operational decisions listed | Not production-ready until placeholders/integrations are resolved |

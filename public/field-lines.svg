@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1050" fill="none">
+  <rect width="900" height="1050" fill="#D8C28F"/>
+  <circle cx="650" cy="250" r="122" fill="#D5774A"/>
+  <path d="M-61 676c125-143 262-183 417-120 139 57 226 55 335-7 86-49 152-58 270-34v535H-61V676Z" fill="#76906C"/>
+  <path d="M-46 770c166-131 293-144 452-89 160 55 252 53 370-9 68-36 117-37 187-20v398H-46V770Z" fill="#526D55"/>
+  <path d="M-74 865c169-111 305-108 464-63 154 44 253 54 390-2 70-28 133-29 206-14v287H-74V865Z" fill="#344F3F"/>
+  <path d="M-35 675c143-111 265-135 393-94 143 46 229 65 359 6 91-41 157-50 249-31" stroke="#233D32" stroke-width="2" opacity=".58"/>
+  <path d="M-18 722c148-112 267-123 399-80 150 49 238 67 372 7 85-38 149-45 223-29" stroke="#233D32" stroke-width="2" opacity=".48"/>
+  <path d="M-22 804c170-101 291-107 438-62 140 43 253 54 380 4 69-27 132-33 199-21" stroke="#D8C28F" stroke-width="2" opacity=".55"/>
+  <path d="M-14 907c180-79 298-81 449-46 160 37 263 34 401-14 62-21 112-25 175-18" stroke="#D8C28F" stroke-width="2" opacity=".45"/>
+  <path d="M185 1048c34-83 64-137 90-159 27 26 51 81 72 159M247 899l-28-44m46 39 26-49m-32 89-42-38m59 36 39-36" stroke="#263E31" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M617 1050c28-83 55-128 81-148 25 25 49 75 70 148m-129-106-34-40m57 37 25-48m-29 89-45-35m62 36 38-38" stroke="#253C30" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M449 447c0 0 34-46 54-71 21 25 52 71 52 71M502 446V323" stroke="#344F3F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M497 371c-32-2-44-23-48-42 28-2 44 11 48 42Zm8-24c29-2 41-21 45-39-26-2-40 10-45 39Z" fill="#526D55"/>
+  <path d="M98 536h160m-87-37 87 37-87 37m542-88h103m-58-34 58 34-58 34" stroke="#233D32" stroke-width="2" opacity=".4"/>
+  <text x="44" y="72" fill="#233D32" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">A LANDSCAPE OF POSSIBILITY</text>
+</svg>
