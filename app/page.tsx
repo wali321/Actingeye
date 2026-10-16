@@ -1,29 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const impactItems = [
-  {
-    value: "1,250",
-    label: "Learners reached",
-    detail: "Learners engaging with education, digital literacy, and learning resources.",
-  },
-  {
-    value: "12",
-    label: "Learning communities",
-    detail: "Schools and community spaces connected through learning initiatives.",
-  },
-  {
-    value: "180",
-    label: "Course completions",
-    detail: "Learners completing an introductory digital skills or coding pathway.",
-  },
-];
+import { impactHighlights } from "@/components/impact-data";
 
 const pathways = [
   { number: "01", title: "Learn", text: "Explore digital literacy, coding, and learning resources.", href: "/programs", action: "Explore our work" },
   { number: "02", title: "Volunteer", text: "Bring your time, knowledge, and perspective to the community.", href: "/get-involved", action: "Get involved" },
   { number: "03", title: "Partner", text: "Connect with Acting Eye about education and digital access.", href: "/contact", action: "Start a conversation" },
-  { number: "04", title: "Stay connected", text: "Reach the team by email or toll-free phone.", href: "/contact", action: "Contact the team" },
 ];
 
 export default function Home() {
@@ -74,14 +56,14 @@ export default function Home() {
       </section>
 
       <section className="impact section-pad" aria-labelledby="impact-title">
-        <div className="section-kicker section-kicker-light"><span>02 / IMPACT &amp; TRANSPARENCY</span><span>ILLUSTRATIVE DEMO DATA</span></div>
+        <div className="section-kicker section-kicker-light"><span>02 / IMPACT &amp; TRANSPARENCY</span><span>FY 2025–26</span></div>
         <div className="impact-heading">
-          <div><p className="eyebrow">The work, made visible</p><h2 id="impact-title">Progress deserves <em>proof.</em></h2></div>
-          <p>A concise view of learner reach, learning communities, and completed digital skills pathways.</p>
+          <div><p className="eyebrow">The difference we make</p><h2 id="impact-title">Every opportunity <em>opens a door.</em></h2></div>
+          <p>A transparent look at our efforts to make education more accessible through book distribution, digital learning resources, and support for students who need them.</p>
         </div>
-        <p className="impact-integrity-note">Illustrative figures · Demo reporting period 2025–26</p>
+        <p className="impact-integrity-note">Illustrative hackathon demo figures · Not verified Acting Eye results.</p>
         <div className="impact-list">
-          {impactItems.map((item, index) => (
+          {impactHighlights.map((item, index) => (
             <article className="impact-item" key={item.label}>
               <div className="impact-measure">
                 <span className="impact-index">0{index + 1} <span> / 03</span></span>
@@ -94,6 +76,10 @@ export default function Home() {
             </article>
           ))}
         </div>
+        <p className="impact-closing-line">
+          Every number represents an effort, every resource creates an opportunity, and every
+          contribution brings us closer to a future where access to education is not a barrier.
+        </p>
         <Link className="arrow-link arrow-link-light" href="/impact">Explore the impact framework <span aria-hidden="true">↗</span></Link>
       </section>
 
@@ -104,43 +90,53 @@ export default function Home() {
           <p>From a school computer laboratory in Africa to book distribution in India, each initiative opens another path to learning.</p>
         </div>
         <div className="program-grid">
-          <Link className="program-feature" href="/programs/program-two">
-            <span className="program-label">INITIATIVE / 01 · DIGITAL LEARNING</span>
-            <span className="program-art">
+          <article className="program-feature">
+            <Link className="program-art program-art-feature" href="/programs/program-two" aria-label="Explore Computers for underserved learners">
               <Image
                 src="/lab1.jpg"
                 alt="Students learning at desktop computers in a school laboratory."
                 width={1125}
                 height={1120}
-                sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 45vw"
+                sizes="(max-width: 680px) 100vw, (max-width: 900px) 70vw, 62vw"
                 className="program-art-image"
               />
-            </span>
-            <span className="program-info"><span><strong>Computers for underserved learners</strong><small>School computer laboratory · Africa</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
-          </Link>
-          <Link className="program-secondary" href="/programs/book-distribution">
-            <span className="program-label">INITIATIVE / 02 · LEARNING RESOURCES</span>
-            <span className="program-art">
+              <span className="program-image-caption">SCHOOL COMPUTER LABORATORY · AFRICA</span>
+            </Link>
+            <div className="program-feature-copy">
+              <span className="program-label"><span>01</span> DIGITAL LEARNING</span>
+              <div className="program-feature-heading">
+                <h3><Link href="/programs/program-two">Computers for underserved learners</Link></h3>
+                <Link className="program-text-link" href="/programs/program-two">Explore initiative <span aria-hidden="true">↗</span></Link>
+              </div>
+            </div>
+          </article>
+          <article className="program-secondary">
+            <span className="program-label"><span>02</span> LEARNING RESOURCES</span>
+            <Link className="program-art program-art-secondary" href="/programs/book-distribution" aria-label="Explore Books for young learners">
               <Image
                 src="/books.jpg"
                 alt="Students holding books during a book distribution in India."
                 width={1200}
                 height={900}
-                sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 45vw"
+                sizes="(max-width: 680px) 100vw, (max-width: 900px) 50vw, 33vw"
                 className="program-art-image"
               />
-            </span>
-            <span className="program-info"><span><strong>Books for young learners</strong><small>Book distribution · India</small></span><span className="circle-arrow" aria-hidden="true">↗</span></span>
-          </Link>
+              <span className="program-image-caption">BOOK DISTRIBUTION · INDIA</span>
+            </Link>
+            <div className="program-secondary-copy">
+              <h3><Link href="/programs/book-distribution">Books for young learners</Link></h3>
+              <Link className="program-text-link" href="/programs/book-distribution">Explore initiative <span aria-hidden="true">↗</span></Link>
+            </div>
+          </article>
         </div>
         <Link className="arrow-link" href="/programs">View all programs <span aria-hidden="true">↗</span></Link>
       </section>
 
       <section className="story section-pad" aria-labelledby="story-title">
-        <div className="section-kicker"><span>04 / FIELD NOTES</span><span>STORIES WITH CONSENT</span></div>
+        <div className="section-kicker"><span>04 / FIELD NOTES</span><span>ILLUSTRATIVE STORIES</span></div>
         <div className="story-grid">
-          <div className="story-art" aria-hidden="true"><Image src="/field-lines.svg" alt="" fill sizes="(max-width: 680px) 100vw, 50vw" className="story-art-image" /></div>
-          <div className="story-copy"><p className="eyebrow">Field notes · illustrative stories</p><h2 id="story-title">Stories belong to the people who <em>live them.</em></h2><p>Explore illustrative stories about the confidence, curiosity, and opportunity that learning can create.</p><Link className="arrow-link" href="/stories">Visit field notes <span aria-hidden="true">↗</span></Link></div>
+          <div className="story-art" aria-hidden="true"><Image src="/story.jpg" alt="" fill sizes="(max-width: 680px) 100vw, 50vw" className="story-art-image" /></div>
+          <div className="story-copy"><p className="eyebrow">Field notes · imagined journeys</p><h2 id="story-title">Stories belong to the people who <em>live them.</em></h2><p>Two imagined journeys trace the confidence, curiosity, and possibility that learning can create.</p><Link className="arrow-link" href="/stories">Visit field notes <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
 
@@ -158,12 +154,17 @@ export default function Home() {
       </section>
 
       <section className="places section-pad" aria-labelledby="places-title">
-        <div className="section-kicker"><span>06 / PLACE MATTERS</span><span>NAKAWA · KIREKA · KAMPALA</span></div>
+        <div className="section-kicker"><span>06 / PLACE MATTERS</span><span>GEOGRAPHIC REFERENCE</span></div>
         <div className="places-inner">
           <div>
             <p className="eyebrow">A sense of place</p>
             <h2 id="places-title">Learning grows <em>locally.</em></h2>
-            <p>A map reference to Nakawa, Kireka, and Kyambogo in Kampala, Uganda.</p>
+            <p>
+              We are planning to support schools around Nakawa, Kireka, and Kyambogo in Kampala,
+              Uganda—where financial constraints can limit access to learning resources and digital
+              tools. Our aim is to work with school communities to understand their priorities and
+              explore practical ways to help.
+            </p>
           </div>
           <figure className="place-map">
             <Image
@@ -173,7 +174,6 @@ export default function Home() {
               height={813}
               sizes="(max-width: 680px) 100vw, (max-width: 900px) 90vw, 55vw"
             />
-            <figcaption>Nakawa · Kireka · Kampala, Uganda</figcaption>
           </figure>
         </div>
         <Link className="arrow-link" href="/about">Learn about the organization <span aria-hidden="true">↗</span></Link>

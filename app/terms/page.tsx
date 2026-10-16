@@ -1,8 +1,27 @@
 import type { Metadata } from "next";
 import { PageHeading } from "@/components/page-heading";
 
-export const metadata: Metadata = { title: "Terms", description: "Terms of use placeholder requiring legal review." };
+export const metadata: Metadata = {
+  title: "Site information",
+  description: "Information about the Acting Eye hackathon demo.",
+};
 
 export default function TermsPage() {
-  return <main id="main" className="page-main"><PageHeading index="10" eyebrow="Terms of use" title={<>Clear expectations, <em>fairly stated.</em></>} intro="This page is a placeholder and is not legal advice or a complete agreement." /><article className="page-content"><div className="status-callout">LEGAL PLACEHOLDER · Confirm the legal entity, jurisdiction, site functionality, user obligations, intellectual property, donation terms, dispute process, and effective date with counsel.</div><ul className="document-list"><li><span>Legal entity and jurisdiction</span><span>[Confirm]</span></li><li><span>Site use and content</span><span>[Draft and review]</span></li><li><span>Donations and refunds</span><span>[Add only if payments are enabled]</span></li><li><span>Liability and dispute terms</span><span>[Legal review required]</span></li></ul></article></main>;
+  return (
+    <main id="main" className="page-main">
+      <PageHeading
+        index="10"
+        section="SITE INFORMATION"
+        eyebrow="About this website"
+        title={<>A space for learning and <em>possibility.</em></>}
+        intro="This website shares information about Acting Eye's education and digital opportunity work."
+      />
+      <article className="page-content">
+        <p className="body-large">
+          The impact dashboard demonstrates how program information can be shared. This site does
+          not process donations, enrollments, or service agreements.
+        </p>
+      </article>
+    </main>
+  );
 }

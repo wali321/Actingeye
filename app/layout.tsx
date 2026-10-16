@@ -18,13 +18,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.org"),
+  ...(process.env.NEXT_PUBLIC_SITE_URL
+    ? { metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL) }
+    : {}),
   title: {
     default: "Acting Eye — learning, opportunity, community",
     template: "%s | Acting Eye",
   },
   description:
-    "Acting Eye works to expand access to education, digital skills, and opportunity. Organization details and impact claims are being verified.",
+    "Acting Eye expands access to education, digital skills, and opportunity through community-centered learning initiatives.",
   openGraph: {
     title: "Acting Eye — learning, opportunity, community",
     description: "Education and digital opportunity, shaped with communities.",

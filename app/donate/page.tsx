@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { DonationOptions } from "@/components/donation-options";
+import Link from "next/link";
 import { PageHeading } from "@/components/page-heading";
 
-export const metadata: Metadata = { title: "Support Acting Eye", description: "Explore sample giving options for Acting Eye." };
+export const metadata: Metadata = {
+  title: "Support Acting Eye",
+  description: "Contact Acting Eye to learn more about supporting education and digital opportunity.",
+};
 
 export default function DonatePage() {
   return (
@@ -11,17 +14,16 @@ export default function DonatePage() {
         index="06"
         section="SUPPORT"
         eyebrow="Support learning"
-        title={<>Make giving <em>thoughtful.</em></>}
-        intro="Choose a sample amount to preview the giving experience and support education and digital opportunity."
+        title={<>Make room for <em>opportunity.</em></>}
+        intro="Education and digital skills grow stronger when more people have the chance to take part."
       />
-      <div className="page-content donate-layout">
-        <div><DonationOptions /></div>
-        <aside className="donate-aside">
-          <p className="eyebrow">Giving with care</p>
-          <h2>Learning takes a community.</h2>
-          <p>Your support can help widen access to books, digital skills, and learning opportunities.</p>
-          <p>For questions, contact Acting Eye at <a href="mailto:helpactingeye@organisation.org">helpactingeye@organisation.org</a>.</p>
-        </aside>
+      <div className="page-content">
+        <div className="content-panel">
+          <p className="eyebrow">Get in touch</p>
+          <h2>Giving is not available online in this demo.</h2>
+          <p>Contact Acting Eye to learn more about supporting education and digital opportunity.</p>
+          <Link className="arrow-link" href="/contact">Contact Acting Eye <span aria-hidden="true">↗</span></Link>
+        </div>
       </div>
     </main>
   );

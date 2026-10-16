@@ -5,7 +5,7 @@ import { illustrativeStoryLabel, stories } from "@/app/stories/stories";
 export const metadata: Metadata = {
   title: "Field Notes",
   description:
-    "Illustrative stories about education, digital learning, mentorship, and the opportunities that grow when access to learning expands.",
+    "Field Notes explores education, digital learning, mentorship, and opportunity through illustrative stories.",
 };
 
 export default function StoriesPage() {
@@ -57,7 +57,7 @@ export default function StoriesPage() {
         </p>
         <div className="stories-cta-links">
           <Link className="button button-dark" href="/get-involved">Volunteer or mentor <span aria-hidden="true">↗</span></Link>
-          <Link className="text-link" href="/donate">Explore giving <span aria-hidden="true">↗</span></Link>
+          <Link className="text-link" href="/impact">Explore the impact dashboard <span aria-hidden="true">↗</span></Link>
           <Link className="text-link" href="/contact">Contact us <span aria-hidden="true">↗</span></Link>
         </div>
       </section>

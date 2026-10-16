@@ -1,8 +1,46 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ImpactCharts } from "@/components/impact-charts";
 import { PageHeading } from "@/components/page-heading";
 
-export const metadata: Metadata = { title: "Transparency", description: "Registration, financial, and policy information to be supplied by the organization." };
+export const metadata: Metadata = {
+  title: "Transparency",
+  description: "Acting Eye's approach to clear, responsible impact reporting.",
+};
 
 export default function TransparencyPage() {
-  return <main id="main" className="page-main"><PageHeading index="07" eyebrow="Accountability is visible" title={<>Open information. <em>Clear limits.</em></>} intro="This page reserves space for approved public documents. Legal status, tax benefits, and financial details are hidden until confirmed." /><div className="page-content"><div className="status-callout">No registration, tax-exemption, audit, or financial information was supplied. No registration number, 80G, 12A, FCRA, or other status is claimed.</div><ul className="document-list"><li><span>Legal name and entity type</span><span>[Add verified details]</span></li><li><span>Registration identifiers</span><span>[Add only after review]</span></li><li><span>Tax benefits and eligibility</span><span>[Add approved legal wording]</span></li><li><span>Annual report and audited statements</span><span>[Add accessible approved documents]</span></li><li><span>Safeguarding, privacy, and complaints policies</span><span>[Add current public policies]</span></li></ul><p className="placeholder-note">All legal, financial, tax, and compliance content requires review before publication.</p></div></main>;
+  return (
+    <main id="main" className="page-main">
+      <PageHeading
+        index="07"
+        section="TRANSPARENCY"
+        eyebrow="Accountability is visible"
+        title={<>Open information. <em>Clear context.</em></>}
+        intro="Trust grows when results are shared with the methods, limits, and lived experience behind them."
+      />
+      <article className="page-content">
+        <div className="status-callout">
+          This demonstration includes illustrative impact figures. Verified results, audited
+          financial statements, and public governance documents are not part of this site.
+        </div>
+        <section className="transparency-charts" aria-labelledby="transparency-charts-title">
+          <div className="transparency-charts-heading">
+            <p className="eyebrow">Illustrative demo data · FY 2025–26</p>
+            <h2 id="transparency-charts-title">
+              The numbers, <em>in context.</em>
+            </h2>
+            <p>
+              Sample course progress and a fictional resource allocation are shown for demonstration
+              only; neither represents verified outcomes or audited spending.
+            </p>
+          </div>
+          <ImpactCharts />
+        </section>
+        <div className="route-actions">
+          <Link className="route-action" href="/impact">Explore the impact dashboard ↗</Link>
+          <Link className="route-action route-action-secondary" href="/contact">Contact Acting Eye ↗</Link>
+        </div>
+      </article>
+    </main>
+  );
 }

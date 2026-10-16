@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = [
   { href: "/about", label: "About" },
@@ -13,7 +14,16 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <Link className="footer-brand" href="/"><span aria-hidden="true">✳</span><span>Acting Eye<small>LEARNING · OPPORTUNITY · COMMUNITY</small></span></Link>
+        <Link className="footer-brand" href="/">
+          <Image
+            className="brand-icon"
+            src="/logo.png"
+            alt=""
+            width={48}
+            height={48}
+          />
+          <span>Acting Eye<small>LEARNING · OPPORTUNITY · COMMUNITY</small></span>
+        </Link>
         <p>Education and digital opportunity, shaped with clarity, dignity, and accountability.</p>
         <Link className="footer-cta" href="/get-involved">Find your way in <span aria-hidden="true">↗</span></Link>
       </div>
@@ -22,8 +32,7 @@ export function SiteFooter() {
         <div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© 2026 Acting Eye</span></div>
       </div>
       <p className="footer-note">
-        HACKATHON DEMO · SAMPLE IMPACT DATA IS ILLUSTRATIVE, NOT VERIFIED
-        {" · "}<a href="mailto:helpactingeye@organisation.org">helpactingeye@organisation.org</a>
+        CONTACT · <a href="mailto:helpactingeye@organisation.org">helpactingeye@organisation.org</a>
         {" · "}<a href="tel:18001805220">1800-180-5220</a>
       </p>
     </footer>

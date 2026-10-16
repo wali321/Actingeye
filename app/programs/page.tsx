@@ -36,7 +36,7 @@ export default function ProgramsPage() {
         statusLabel="EDUCATION & DIGITAL EMPOWERMENT"
       />
       <div className="page-content">
-        <div className="content-grid">
+        <div className="programs-list">
           {programs.map((program, index) => (
             <article className="content-panel program-panel" key={program.href}>
               {program.image ? (

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const navigation = [
@@ -35,7 +36,13 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="Acting Eye — home" onClick={closeMenu}>
-        <span className="wordmark-symbol" aria-hidden="true">✳</span>
+        <Image
+          className="brand-icon"
+          src="/logo.png"
+          alt=""
+          width={48}
+          height={48}
+        />
         <span>Acting Eye<small>LEARNING · OPPORTUNITY · COMMUNITY</small></span>
       </Link>
       <nav className="desktop-nav" aria-label="Main navigation">

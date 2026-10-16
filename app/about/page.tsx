@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  BalanceScaleIcon,
+  BookOpen01Icon,
+  Target01Icon,
+  UserGroupIcon,
+} from "@hugeicons/core-free-icons";
 
 export const metadata: Metadata = {
   title: "About Acting Eye",
@@ -11,6 +18,7 @@ const aboutSections = [
   {
     number: "01",
     label: "OUR MISSION",
+    icon: Target01Icon,
     eyebrow: "Education · Digital opportunity",
     heading: <>Learning that belongs to the <em>learner.</em></>,
     paragraphs: [
@@ -22,6 +30,7 @@ const aboutSections = [
   {
     number: "02",
     label: "OUR STORY",
+    icon: BookOpen01Icon,
     eyebrow: "Built from questions, not assumptions",
     heading: <>Talent is everywhere. Opportunity is <em>not.</em></>,
     paragraphs: [
@@ -33,6 +42,7 @@ const aboutSections = [
   {
     number: "03",
     label: "OUR PEOPLE",
+    icon: UserGroupIcon,
     eyebrow: "Shared effort · local knowledge",
     heading: <>The work is carried by <em>people.</em></>,
     paragraphs: [
@@ -43,6 +53,7 @@ const aboutSections = [
   {
     number: "04",
     label: "OUR PRINCIPLES",
+    icon: BalanceScaleIcon,
     eyebrow: "Trust through accountability",
     heading: <>Accountability is a practice, not a <em>promise.</em></>,
     paragraphs: [
@@ -60,17 +71,27 @@ export default function AboutPage() {
           <span>03 / OUR STORY</span>
           <span>ACTING EYE · EDUCATION &amp; OPPORTUNITY</span>
         </div>
-        <p className="eyebrow">Start with the people</p>
-        <h1>The story starts with <em>listening.</em></h1>
-        <p className="page-intro">
-          Before we build programs, we ask questions. Before we measure outcomes, we hear from the
-          people living them. This section explains why Acting Eye exists, what it believes, and how
-          communities are meant to shape its work—not as beneficiaries of charity, but as authors of
-          their own futures.
-        </p>
+        <div className="about-hero-grid">
+          <div className="about-hero-title">
+            <p className="eyebrow">Start with the people</p>
+            <h1>The story starts with <em>listening.</em></h1>
+          </div>
+          <div className="about-hero-aside">
+            <span className="about-hero-index" aria-hidden="true">03</span>
+            <p className="page-intro">
+              Before we build programs, we ask questions. Before we measure outcomes, we hear from the
+              people living them. This section explains why Acting Eye exists, what it believes, and how
+              communities are meant to shape its work—not as beneficiaries of charity, but as authors of
+              their own futures.
+            </p>
+          </div>
+        </div>
+        <a className="about-scroll-link" href="#about-sections">
+          Explore our story <span aria-hidden="true">↓</span>
+        </a>
       </header>
 
-      <div className="about-sections">
+      <div className="about-sections" id="about-sections">
         {aboutSections.map((section) => (
           <section
             className="about-section"
@@ -78,10 +99,13 @@ export default function AboutPage() {
             key={section.number}
           >
             <div className="about-section-meta">
-              <span>{section.number}</span>
-              <span>{section.label}</span>
+              <span className="about-section-icon" aria-hidden="true">
+                <HugeiconsIcon icon={section.icon} size={22} strokeWidth={1.5} />
+              </span>
+              <span className="about-section-number">{section.number}</span>
             </div>
             <div className="about-section-content">
+              <p className="about-section-label">{section.label}</p>
               <p className="eyebrow">{section.eyebrow}</p>
               <h2 id={`about-${section.number}-title`}>{section.heading}</h2>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

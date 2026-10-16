@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
-import { PageHeading } from "@/components/page-heading";
+import {
+  LearningProgressChart,
+  ResourceAllocationChart,
+} from "@/components/impact-charts";
+import {
+  impactHighlights,
+  learningProgress,
+  learningProgressPercent,
+} from "@/components/impact-data";
 
 export const metadata: Metadata = {
   title: "Impact",
@@ -7,33 +15,12 @@ export const metadata: Metadata = {
 };
 
 const metrics = [
+  ...impactHighlights,
   {
-    value: "1,250",
-    label: "Learners reached",
-    detail: "Learners engaging with education, digital literacy, and learning resources.",
-  },
-  {
-    value: "12",
-    label: "Learning communities",
-    detail: "Schools and community spaces connected through learning initiatives.",
-  },
-  {
-    value: "180",
-    label: "Course completions",
-    detail: "Learners completing an introductory digital skills or coding pathway.",
-  },
-  {
-    value: "68%",
+    value: `${learningProgressPercent}%`,
     label: "Learning pathway completion",
-    detail: "180 of 265 learners complete a structured course in this sample dataset.",
+    detail: `${learningProgress.completed} of ${learningProgress.total} learners complete a structured course in this sample dataset.`,
   },
-] as const;
-
-const allocations = [
-  { label: "Programs & learning resources", value: 78, detail: "Curriculum, learning spaces, books, and mentor support." },
-  { label: "Operations", value: 12, detail: "People and systems supporting program delivery." },
-  { label: "Community outreach", value: 7, detail: "Connecting learners, educators, and partners." },
-  { label: "Reserve", value: 3, detail: "Planning for continuity and unexpected needs." },
 ] as const;
 
 const principles = [
@@ -61,27 +48,23 @@ export default function ImpactPage() {
       <header className="impact-page-hero">
         <div className="section-kicker">
           <span>04 / IMPACT &amp; TRANSPARENCY</span>
-          <span>HACKATHON DEMO · SAMPLE DATA</span>
+          <span>DEMO DATA · FY 2025–26</span>
         </div>
         <p className="eyebrow">Evidence, openly shared</p>
-        <h1>Measure what matters. <em>Then share it openly.</em></h1>
+        <h1>The difference we <em>make.</em></h1>
         <p className="impact-page-intro">
-          Good reporting makes learning visible. This sample dashboard shows how learner reach,
-          course progress, and resource planning could be presented.
-        </p>
-        <p className="prototype-banner" role="note">
-          Illustrative dataset · FY 2025–26 · Figures and budget split are fictional examples, not
-          verified Acting Eye results.
+          Every opportunity opens a door. Explore our efforts to make education more accessible
+          through books, digital learning resources, and practical support for learners.
         </p>
       </header>
 
       <section className="impact-module impact-scoreboard page-content" aria-labelledby="scoreboard-title">
         <div className="impact-module-heading">
           <div>
-            <p className="eyebrow">01 / Learning outcomes</p>
-            <h2 id="scoreboard-title">Progress, made <em>visible.</em></h2>
+            <p className="eyebrow">01 / Learning resources</p>
+            <h2 id="scoreboard-title">Every effort opens a <em>door.</em></h2>
           </div>
-          <p>Sample indicators for digital learning and community access.</p>
+          <p>Illustrative counts for books distributed, laptops supported, and learners supported.</p>
         </div>
         <div className="metric-grid">
           {metrics.map((metric) => (
@@ -92,37 +75,25 @@ export default function ImpactPage() {
             </article>
           ))}
         </div>
+        <div className="impact-progress-chart">
+          <LearningProgressChart />
+        </div>
       </section>
 
       <section className="impact-finance section-pad" aria-labelledby="finance-title">
         <div className="section-kicker section-kicker-light">
           <span>02 / FINANCIAL STEWARDSHIP</span>
-          <span>ILLUSTRATIVE BUDGET SPLIT</span>
+          <span>RESOURCE ALLOCATION</span>
         </div>
         <div className="impact-module-heading impact-module-heading-light">
           <div>
             <p className="eyebrow">A model for clear reporting</p>
             <h2 id="finance-title">Resources with <em>purpose.</em></h2>
           </div>
-          <p>A sample allocation showing how a future financial summary might communicate spending priorities.</p>
+          <p>A clear view of the priorities behind a learning-focused budget.</p>
         </div>
-        <div className="allocation-list" aria-label="Illustrative sample budget allocation">
-          {allocations.map((allocation) => (
-            <div className="allocation-row" key={allocation.label}>
-              <div className="allocation-title">
-                <h3>{allocation.label}</h3>
-                <span>{allocation.value}%</span>
-              </div>
-              <div
-                className="allocation-track"
-                role="img"
-                aria-label={`${allocation.label}: sample allocation of ${allocation.value} percent`}
-              >
-                <span style={{ width: `${allocation.value}%` }} />
-              </div>
-              <p>{allocation.detail}</p>
-            </div>
-          ))}
+        <div className="impact-finance-chart">
+          <ResourceAllocationChart tone="dark" />
         </div>
       </section>
 
@@ -144,7 +115,7 @@ export default function ImpactPage() {
               which resources, teaching approaches, and opportunities make learning meaningful.
             </p>
           </div>
-          <div className="portrait-placeholder" role="img" aria-label="Abstract illustration representing learning and growth.">
+          <div className="impact-illustration" role="img" aria-label="Abstract illustration representing learning and growth.">
             <span className="portrait-orbit portrait-orbit-one" />
             <span className="portrait-orbit portrait-orbit-two" />
             <span className="portrait-sun" />
