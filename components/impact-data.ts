@@ -27,10 +27,3 @@ export const learningProgress = {
 export const learningProgressPercent = Math.round(
   (learningProgress.completed / learningProgress.total) * 100,
 );
-
-export const allocationData = [
-  { bucket: "programs", label: "Programs & learning resources", share: 78 },
-  { bucket: "operations", label: "Operations", share: 12 },
-  { bucket: "outreach", label: "Community outreach", share: 7 },
-  { bucket: "reserve", label: "Reserve", share: 3 },
-] as const;

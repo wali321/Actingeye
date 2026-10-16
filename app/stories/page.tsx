@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { illustrativeStoryLabel, stories } from "@/app/stories/stories";
+import { stories } from "@/app/stories/stories";
 
 export const metadata: Metadata = {
   title: "Field Notes",
   description:
-    "Field Notes explores education, digital learning, mentorship, and opportunity through illustrative stories.",
+    "Editorial narrative drafts about education, families, schools, and communities.",
 };
 
 export default function StoriesPage() {
@@ -16,31 +16,32 @@ export default function StoriesPage() {
           <span>FIELD NOTES / OUR IMPACT</span>
           <span>LEARNING · OPPORTUNITY · COMMUNITY</span>
         </div>
-        <p className="eyebrow">Education opens doors</p>
-        <h1>Every learner deserves a chance to <em>grow.</em></h1>
+        <p className="eyebrow">Acting Eye · Stories of change</p>
+        <h1>Real change begins when opportunity reaches the people who need it most.</h1>
         <p className="stories-intro">
-          Behind every new skill is a new possibility. Explore stories of learners discovering their
-          potential, educators opening doors, and communities building a future through education
-          and digital empowerment.
+          Four narrative drafts explore what educational access can mean for families, schools, and
+          communities.
         </p>
         <Link className="arrow-link" href="/programs">
           Explore our initiatives <span aria-hidden="true">↗</span>
         </Link>
       </header>
 
-      <section className="stories-list page-content" aria-label="Education and digital empowerment stories">
-        {stories.map((story) => (
-          <article className="story-entry" key={story.slug}>
+      <section className="stories-list page-content" aria-label="Stories of change">
+        <p className="stories-disclosure" role="note">
+          These are prototype narratives and quotations, not verified testimonials or confirmed
+          accounts of individual experiences.
+        </p>
+        {stories.map((story, index) => (
+          <article className={`story-entry story-entry-${index + 1}`} key={story.slug}>
             <div className="story-entry-meta">
-              <p className="eyebrow">FIELD NOTE / {story.number} · {story.category.toUpperCase()}</p>
-              <span className="story-entry-mark" aria-hidden="true">✳</span>
+              <p className="eyebrow">{story.number} / {story.category.toUpperCase()}</p>
             </div>
             <div className="story-entry-body">
               <h2>{story.title}</h2>
               <p>{story.summary}</p>
-              <p className="illustrative-label">{illustrativeStoryLabel}</p>
               <Link className="arrow-link" href={`/stories/${story.slug}`}>
-                Read the story <span aria-hidden="true">↗</span>
+                Read this narrative <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </article>

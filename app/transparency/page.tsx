@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ImpactCharts } from "@/components/impact-charts";
+import { LearningProgressChart } from "@/components/impact-charts";
 import { PageHeading } from "@/components/page-heading";
 
 export const metadata: Metadata = {
@@ -20,21 +20,20 @@ export default function TransparencyPage() {
       />
       <article className="page-content">
         <div className="status-callout">
-          This demonstration includes illustrative impact figures. Verified results, audited
-          financial statements, and public governance documents are not part of this site.
+          Impact figures are pending verification. Audited financial statements and public governance
+          documents are not published here.
         </div>
         <section className="transparency-charts" aria-labelledby="transparency-charts-title">
           <div className="transparency-charts-heading">
-            <p className="eyebrow">Illustrative demo data · FY 2025–26</p>
+            <p className="eyebrow">FY 2025–26 · Verification pending</p>
             <h2 id="transparency-charts-title">
               The numbers, <em>in context.</em>
             </h2>
             <p>
-              Sample course progress and a fictional resource allocation are shown for demonstration
-              only; neither represents verified outcomes or audited spending.
+              Course completion figures await verification against organizational records.
             </p>
           </div>
-          <ImpactCharts />
+          <LearningProgressChart />
         </section>
         <div className="route-actions">
           <Link className="route-action" href="/impact">Explore the impact dashboard ↗</Link>

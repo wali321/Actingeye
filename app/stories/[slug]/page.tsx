@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: StoryParams): Promise<Metadat
 
   return {
     title: story.title,
-    description: story.summary,
+    description: `Prototype narrative, not a verified testimonial. ${story.summary}`,
   };
 }
 
@@ -31,17 +31,24 @@ export default async function StoryPage({ params }: StoryParams) {
     <main id="main" className="page-main">
       <header className="stories-hero story-detail-hero">
         <div className="section-kicker">
-          <span>FIELD NOTE / {story.number}</span>
-          <span>ILLUSTRATIVE STORY · {story.category.toUpperCase()}</span>
+          <span>{story.number} / {story.category.toUpperCase()}</span>
+          <span>ACTING EYE · STORIES OF CHANGE</span>
         </div>
-        <p className="eyebrow">Education · Digital empowerment</p>
+        <p className="eyebrow">Narrative draft · not a verified testimonial</p>
         <h1>{story.title}</h1>
-        <p className="stories-intro">{story.summary}</p>
       </header>
 
       <article className="story-detail page-content" aria-label={story.title}>
+        <p className="story-disclosure" role="note">
+          This is a prototype narrative and quotation, not a verified testimonial or confirmed
+          account of an individual experience.
+        </p>
         <div className="story-detail-copy">
           {story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <aside className="story-impact">
+            <p className="eyebrow">The impact</p>
+            <p>{story.impact}</p>
+          </aside>
         </div>
         <div className="story-detail-nav">
           <Link className="arrow-link" href="/stories">Back to Field Notes <span aria-hidden="true">↗</span></Link>

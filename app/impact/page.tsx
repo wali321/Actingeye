@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import {
-  LearningProgressChart,
-  ResourceAllocationChart,
-} from "@/components/impact-charts";
+import Image from "next/image";
+import { LearningProgressChart } from "@/components/impact-charts";
 import {
   impactHighlights,
   learningProgress,
@@ -11,7 +9,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Impact",
-  description: "Explore Acting Eye's illustrative impact dashboard and reporting approach.",
+  description: "Explore Acting Eye's impact reporting and approach to verification.",
 };
 
 const metrics = [
@@ -19,7 +17,7 @@ const metrics = [
   {
     value: `${learningProgressPercent}%`,
     label: "Learning pathway completion",
-    detail: `${learningProgress.completed} of ${learningProgress.total} learners complete a structured course in this sample dataset.`,
+    detail: `${learningProgress.completed} of ${learningProgress.total} learners; figures are pending verification.`,
   },
 ] as const;
 
@@ -48,13 +46,16 @@ export default function ImpactPage() {
       <header className="impact-page-hero">
         <div className="section-kicker">
           <span>04 / IMPACT &amp; TRANSPARENCY</span>
-          <span>DEMO DATA · FY 2025–26</span>
+          <span>FY 2025–26 · VERIFICATION PENDING</span>
         </div>
         <p className="eyebrow">Evidence, openly shared</p>
         <h1>The difference we <em>make.</em></h1>
         <p className="impact-page-intro">
           Every opportunity opens a door. Explore our efforts to make education more accessible
           through books, digital learning resources, and practical support for learners.
+        </p>
+        <p className="prototype-banner" role="note">
+          Impact figures are pending verification against organizational records.
         </p>
       </header>
 
@@ -64,7 +65,7 @@ export default function ImpactPage() {
             <p className="eyebrow">01 / Learning resources</p>
             <h2 id="scoreboard-title">Every effort opens a <em>door.</em></h2>
           </div>
-          <p>Illustrative counts for books distributed, laptops supported, and learners supported.</p>
+          <p>Counts for books distributed, laptops supported, and learners supported; verification is pending.</p>
         </div>
         <div className="metric-grid">
           {metrics.map((metric) => (
@@ -80,26 +81,9 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="impact-finance section-pad" aria-labelledby="finance-title">
-        <div className="section-kicker section-kicker-light">
-          <span>02 / FINANCIAL STEWARDSHIP</span>
-          <span>RESOURCE ALLOCATION</span>
-        </div>
-        <div className="impact-module-heading impact-module-heading-light">
-          <div>
-            <p className="eyebrow">A model for clear reporting</p>
-            <h2 id="finance-title">Resources with <em>purpose.</em></h2>
-          </div>
-          <p>A clear view of the priorities behind a learning-focused budget.</p>
-        </div>
-        <div className="impact-finance-chart">
-          <ResourceAllocationChart tone="dark" />
-        </div>
-      </section>
-
       <section className="impact-ripple section-pad" aria-labelledby="ripple-title">
         <div className="section-kicker">
-          <span>03 / BEYOND THE NUMBERS</span>
+          <span>02 / BEYOND THE NUMBERS</span>
           <span>LEARNING IN PRACTICE</span>
         </div>
         <div className="ripple-grid">
@@ -115,20 +99,24 @@ export default function ImpactPage() {
               which resources, teaching approaches, and opportunities make learning meaningful.
             </p>
           </div>
-          <div className="impact-illustration" role="img" aria-label="Abstract illustration representing learning and growth.">
-            <span className="portrait-orbit portrait-orbit-one" />
-            <span className="portrait-orbit portrait-orbit-two" />
-            <span className="portrait-sun" />
-            <span className="portrait-head" />
-            <span className="portrait-shoulders" />
-            <span className="portrait-caption">LEARNING<br />GROWS WITH OPPORTUNITY</span>
-          </div>
+          <figure className="impact-illustration">
+            <Image
+              src="/writing.jpg"
+              alt="A person writing notes on a document at a desk."
+              fill
+              sizes="(max-width: 680px) 100vw, 35vw"
+              className="impact-writing-image"
+            />
+            <figcaption className="impact-image-caption">
+              REFLECTION · LEARNING · WHAT COMES NEXT
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section className="impact-accountability section-pad" aria-labelledby="accountability-title">
         <div className="section-kicker">
-          <span>04 / ACCOUNTABILITY</span>
+          <span>03 / ACCOUNTABILITY</span>
           <span>OUR PRINCIPLES</span>
         </div>
         <div className="impact-module-heading">

@@ -26,6 +26,10 @@ export default function ContactPage() {
             <span>Toll-free number</span>
             <a className="contact-method" href="tel:18001805220">1800-180-5220</a>
           </li>
+          <li>
+            <span>Headquarters</span>
+            <span>Switzerland</span>
+          </li>
         </ul>
       </div>
     </main>

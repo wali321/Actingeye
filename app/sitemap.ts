@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
+import { stories } from "@/app/stories/stories";
 
 const routes = [
   "/", "/about", "/programs", "/programs/program-two", "/programs/book-distribution",
-  "/stories", "/stories/first-step-digital-world", "/stories/when-learning-finds-a-way",
+  "/stories", ...stories.map(({ slug }) => `/stories/${slug}`),
   "/impact", "/get-involved", "/donate", "/transparency",
   "/contact", "/privacy", "/terms",
 ];

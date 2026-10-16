@@ -41,16 +41,25 @@ export default function Home() {
       </section>
 
       <section className="mission section-pad" id="mission" aria-labelledby="mission-title">
-        <div className="section-kicker"><span>01 / OUR PURPOSE</span><span>THE STARTING POINT</span></div>
-        <div className="mission-grid">
-          <p className="eyebrow">Education · digital opportunity</p>
-          <div>
-            <h2 id="mission-title">The best solutions begin with <em>listening.</em></h2>
-            <p className="body-large">
-              Acting Eye works to expand access to education and digital opportunity, so every
-              learner can build the skills, confidence, and connections that open real doors.
-            </p>
-            <Link className="arrow-link" href="/about">Meet the organization <span aria-hidden="true">↗</span></Link>
+        <div className="section-kicker">
+          <span>01 / OUR PURPOSE</span>
+          <span>EDUCATION · DIGITAL OPPORTUNITY</span>
+        </div>
+        <div className="mission-editorial">
+          <p className="eyebrow">The starting point</p>
+          <div className="mission-editorial-body">
+            <h2 id="mission-title">
+              <span>The best solutions</span>
+              <span>begin with</span>
+              <em>listening.</em>
+            </h2>
+            <div className="mission-support">
+              <p>
+                Acting Eye works to expand access to education and digital opportunity, so every
+                learner can build the skills, confidence, and connections that open real doors.
+              </p>
+              <Link className="arrow-link" href="/about">Meet the organization <span aria-hidden="true">↗</span></Link>
+            </div>
           </div>
         </div>
       </section>
@@ -61,7 +70,7 @@ export default function Home() {
           <div><p className="eyebrow">The difference we make</p><h2 id="impact-title">Every opportunity <em>opens a door.</em></h2></div>
           <p>A transparent look at our efforts to make education more accessible through book distribution, digital learning resources, and support for students who need them.</p>
         </div>
-        <p className="impact-integrity-note">Illustrative hackathon demo figures · Not verified Acting Eye results.</p>
+        <p className="impact-integrity-note">Impact figures are pending verification against organizational records.</p>
         <div className="impact-list">
           {impactHighlights.map((item, index) => (
             <article className="impact-item" key={item.label}>
@@ -136,7 +145,7 @@ export default function Home() {
         <div className="section-kicker"><span>04 / FIELD NOTES</span><span>ILLUSTRATIVE STORIES</span></div>
         <div className="story-grid">
           <div className="story-art" aria-hidden="true"><Image src="/story.jpg" alt="" fill sizes="(max-width: 680px) 100vw, 50vw" className="story-art-image" /></div>
-          <div className="story-copy"><p className="eyebrow">Field notes · imagined journeys</p><h2 id="story-title">Stories belong to the people who <em>live them.</em></h2><p>Two imagined journeys trace the confidence, curiosity, and possibility that learning can create.</p><Link className="arrow-link" href="/stories">Visit field notes <span aria-hidden="true">↗</span></Link></div>
+          <div className="story-copy"><p className="eyebrow">Narrative drafts</p><h2 id="story-title">Real change begins when opportunity reaches the people who need it most.</h2><p>Illustrative narratives explore how access to books and learning resources may affect families, schools, and communities.</p><Link className="arrow-link" href="/stories">Read the narratives <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
 
@@ -191,8 +200,14 @@ export default function Home() {
       </section>
 
       <section className="closing section-pad" aria-labelledby="closing-title">
+        <Image
+          className="closing-logo"
+          src="/logo.png"
+          alt="Acting Eye"
+          width={72}
+          height={72}
+        />
         <p className="eyebrow">The next chapter is a shared one</p><h2 id="closing-title">Start with a <em>conversation.</em></h2><div className="closing-actions"><Link className="button button-dark" href="/get-involved">Find your way in <span aria-hidden="true">↗</span></Link><Link className="text-link" href="/contact">Get in touch <span aria-hidden="true">↗</span></Link></div>
-        <span className="closing-mark" aria-hidden="true">✳</span>
       </section>
     </main>
   );
